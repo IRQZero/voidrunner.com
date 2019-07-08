@@ -38,6 +38,11 @@ p {
   }
 
 }
+@keyframes fadeIn{
+  from {
+    opacity: 0;
+  }
+}
 #title-bar {
   z-index: 3;
   position: fixed;
@@ -47,7 +52,7 @@ p {
   width: 100vw;
   background-color: #000;
   mix-blend-mode: hard-light;
-  animation: 0.5s cubic-bezier(0.95, 0.0003, 0.795, 0.035) 0s 1 normal openSite;
+  animation: 1.5s cubic-bezier(0.95, 0.0003, 0.795, 0.035) 0s 1 normal openSite;
 }
 
 #title-bar h1 {
@@ -55,7 +60,7 @@ p {
   z-index: 1;
   margin: 0;
   color: #fff;
-  mix-blend-mode: exclusion;
+  mix-blend-mode: overlay;
 }
 
 #tbc {
@@ -103,12 +108,13 @@ p {
 .artist {
   background-color: rgb(255, 0, 180);
   border: 1px solid #000;
-  mix-blend-mode: difference;
+  mix-blend-mode: screen;
   overflow: hidden;
   width: 100vmin;
   margin-left: -5vmin;
   transform: rotate(15deg);
-  padding-bottom: 66%
+  padding-bottom: 66%;
+  animation: 1.0s cubic-bezier(0.95, 0.0003, 0.795, 0.035) 0s 1 normal fadeIn;
 }
 
 .artist-name {

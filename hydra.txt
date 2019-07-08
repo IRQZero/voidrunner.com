@@ -14,7 +14,7 @@ osc([14], [2]).rotate([1.4], [.04].fast(0.05), [7], [0.02].fast(20)).blend(o1, 7
 osc(36).modulatePixelate(o1, 18).scrollX(0.3, [0.3, 3]).mult(o2, 256).mult(o1, -8).out(o0);
 
 // by misterinterrupt
-
+// lines and diamonds
 
 osc([81]).kaleid(2).color(0.3,0.5).rotate([40]).scale(14, 0.5, 8)
   .kaleid(24)
@@ -29,7 +29,7 @@ osc([14], [2]).rotate([1.4], [.04].fast(0.05), [7], [0.02].fast(20)).blend(o1, 7
 osc(36).modulatePixelate(o1, 18).scrollX(0.3, [0.3, 3]).mult(o2, 256).mult(o1, -8).out(o0);
 
 // by misterinterrupt
-
+// star void horizon
 
 osc([24]).kaleid(2).color(0.3,0.5).rotate([40]).scale(1, 5, 0.8)
   .kaleid(12).mask(
@@ -41,7 +41,7 @@ osc([14], [2]).rotate([1.4], [.4].fast(0.5), [17], [2].fast(200)).blend(o1, 7).o
 osc([8]).blend(o2, 0.8).out(o0);
 
 // by misterinterrupt
-
+// static lines
 
 osc([81]).kaleid(2).color(0.3,0.5).rotate([40]).scale(14, 0.5, 8)
   .kaleid(24)
@@ -56,7 +56,7 @@ osc([14], [2]).rotate([1.4], [.04].fast(0.05), [7], [0.02].fast(20)).blend(o1, 7
 osc(36).modulatePixelate(o1, 18).scrollX(0.3, [0.3, 3]).mult(o2, 256).mult(o1, -8).out(o0);
 
 // by misterinterrupt
-
+// fish
 
 osc([81]).kaleid(2).color(0.3,0.5).rotate([40]).scale(14, 0.5, 8)
   .kaleid(24)
