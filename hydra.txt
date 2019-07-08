@@ -1,0 +1,134 @@
+// by misterinterrupt
+
+
+osc([81]).kaleid(4).color(0.3,0.5).rotate([40]).scale(14, 0.5, 8)
+  .kaleid(24)
+  .scrollY(0.5, 1.4)
+  .mask(
+  	osc(512,({time}) => Math.sin(time/24) + 0.9 ) // offset
+  	.kaleid(3), [1,6], 0.5)// end mask
+	.scrollX(1, .9)
+	.scrollY(1, 3.33)
+  .out(o1);
+osc([14], [2]).rotate([1.4], [.04].fast(0.05), [7], [0.02].fast(20)).blend(o1, 7).out(o2);
+osc(36).modulatePixelate(o1, 18).scrollX(0.3, [0.3, 3]).mult(o2, 256).mult(o1, -8).out(o0);
+
+// by misterinterrupt
+
+
+osc([81]).kaleid(2).color(0.3,0.5).rotate([40]).scale(14, 0.5, 8)
+  .kaleid(24)
+  .scrollY(0.5, 1.4)
+  .mask(
+  	osc(512,({time}) => Math.sin(time/24) + 0.9 ) // offset
+  	.kaleid(3), [1,6], 0.5)// end mask
+	.scrollX(1, 0.09)
+	.scrollY(1, .333)
+  .out(o1);
+osc([14], [2]).rotate([1.4], [.04].fast(0.05), [7], [0.02].fast(20)).blend(o1, 7).out(o2);
+osc(36).modulatePixelate(o1, 18).scrollX(0.3, [0.3, 3]).mult(o2, 256).mult(o1, -8).out(o0);
+
+// by misterinterrupt
+
+
+osc([24]).kaleid(2).color(0.3,0.5).rotate([40]).scale(1, 5, 0.8)
+  .kaleid(12).mask(
+  	osc(512,({time}) => Math.sin(time/24) + 0.25 ) // offset
+  	.kaleid(3), 1, 0.9)// end mask
+	.rotate(0.4)
+  .out(o1);
+osc([14], [2]).rotate([1.4], [.4].fast(0.5), [17], [2].fast(200)).blend(o1, 7).out(o2);
+osc([8]).blend(o2, 0.8).out(o0);
+
+// by misterinterrupt
+
+
+osc([81]).kaleid(2).color(0.3,0.5).rotate([40]).scale(14, 0.5, 8)
+  .kaleid(24)
+  .scrollY(0.5, 1.4)
+  .mask(
+  	osc(512,({time}) => Math.sin(time/24) + 0.9 ) // offset
+  	.kaleid(3), 1, 0.5)// end mask
+	.rotate(0.4)
+	.scrollX(1, 9)
+  .out(o1);
+osc([14], [2]).rotate([1.4], [.04].fast(0.05), [7], [0.02].fast(20)).blend(o1, 7).out(o2);
+osc(36).modulatePixelate(o1, 18).scrollX(0.3, [0.3, 3]).mult(o2, 256).mult(o1, -8).out(o0);
+
+// by misterinterrupt
+
+
+osc([81]).kaleid(2).color(0.3,0.5).rotate([40]).scale(14, 0.5, 8)
+  .kaleid(24)
+  .scrollY(0.5, 1.4)
+  .mask(
+  	osc(512,({time}) => Math.sin(time/24) + 0.9 ) // offset
+  	.kaleid(3), 1, 0.5)// end mask
+	.rotate(0.4)
+	.scrollX(1, 9)
+  .out(o1);
+osc([14], [2]).rotate([14], [.04].fast(0.5), [7], [0.02].fast(20)).blend(o1, 7).out(o2);
+osc(36).modulatePixelate(o1, 18).scrollX(0.3, [0.3, 3]).mult(o2, 256).mult(o1, -8)
+
+.kaleid(2).color(0.3,0.5).rotate([40]).scale(1, 5, 2)
+  .mask(
+  	osc(512,({time}) => Math.sin(time/24) + 0.25 ) // offset
+  	.kaleid(3), 1, 0.9)// end mask
+	.modulateRotate(o2, 0.4)
+  .out(o3);
+osc([1.4], [2]).rotate([1.4], [.4].fast(0.5), [17], [2].fast(200)).blend(o1, 7)
+.blend(o3, 0.8).out(o0);
+
+// by misterinterrupt
+
+let sinTime = ({time}) => Math.sin(time);
+shape(48, 2)
+  .scale((sinTime({time})*0.5))
+  .mult(osc(2,0.25,0.9))
+  .modulateRepeatY(osc(432).modulateScale(osc(13.3)), 4, ({time}) => Math.sin(time/25) * 0.5)
+    .invert()
+  .modulateRepeatX(osc(216), 1, ({time}) => Math.sin(time) * 0.025)
+.scrollX(0.03,.1)
+.invert()
+  .modulateKaleid(osc(2).modulateScale(osc(0.256))).modulateScale(osc(5.12))//[[4],[3], [2]])
+  .out(o1);
+
+osc(17.25)
+  .layer(o1, 0.5)
+  .modulateRotate(osc(0.44))
+  .modulateScale(osc(864), 0.4, ({time}) => Math.sin(time/16) * Math.pow(4, .00069))
+
+  .scrollX(14, 0.5)
+.modulate(osc(13.3).modulate(osc(0.69)))
+.out(o0)
+
+// by misterinterrupt
+let sinTime = ({time}) => Math.sin(time/60);
+shape(48, 2)
+//.blend(o2, 0.72)
+  .scale((sinTime({time})*0.5))
+  .mult(osc(2,0.25,0.9))
+  .modulateRepeatY(osc(432).modulateScale(osc(13.3)), 4, ({time}) => Math.sin(time/25) * 0.5)
+.blend(o1, 0.25)  
+  .modulateRepeatX(osc(216), 1, ({time}) => Math.sin(time/84) * 0.025)
+.scrollX(0.03,.001)
+//.invert()
+  .modulateKaleid(osc(2.5))
+  .out(o1);
+
+shape(30, 1)
+  .repeatY(4)
+  .repeatX(4)
+  .scrollX(0.6, 0.05)
+.out(o2);
+
+osc(17.25)
+  .scrollX(144, 155)
+.blend(o2, 0.92)
+
+  .layer(o1, 0.5)
+  .modulateRotate(osc(0.44))
+  .modulateKaleid(osc(.864), 0.004, ({time}) => Math.sin(time/32) * Math.pow(4, .00069))
+.mask(o2, 1.5)
+.rotate(-0.4)
+.out(o0)

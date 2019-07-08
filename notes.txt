@@ -1,0 +1,6 @@
+lock the site id at the bottom left
+rotate a container holding containers
+while scrolling, translate the list of containers from the left side to the right side one at a time
+  on scroll, transform translateY transform translateX
+  apply one size/position animation to all via class, another to what is open via element
+show derotated content inside of the space opened between each container

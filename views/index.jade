@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  canvas#bgc
+  //- #measure-half
+  //- #measure-quarter
+  #title-bar.open-site
+    h1= title
+    canvas#tbc
+  #artists-container
+    each artist, i in artistData
+      .artist
+        .artist-name
+          h2 #{artist.name}
+        .artist-card
+          h3 #{artist.description}
+          ul.releases
+            for release, i in artist.releases
+              li.release
+                h3 #{release.title}
+                img
