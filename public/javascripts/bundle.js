@@ -10670,9 +10670,7 @@ window.onload = function () {
   let bgCanvasEl = document.getElementById('bgc')
   const bgHydra = new Hydra({
     canvas: bgCanvasEl,
-    detectAudio: false,
-    width: "100vw",
-    height: "100vh"
+    detectAudio: false
   });
 
   osc([81]).kaleid(2).color(0.3,0.5).rotate([40]).scale(14, 0.5, 8)

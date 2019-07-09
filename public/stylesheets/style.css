@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Aldrich&display=swap');
 body {
-  font: 1vw "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 1vw 'Aldrich', sans-serif;
   /* overflow: hidden; */ 
   position: relative;
   display: grid;
@@ -9,15 +10,15 @@ body {
 }
 
 h1 {
-  font-size: 5.9vw;
+  font-size: 5.9vmax;
 }
 
 h2 {
-  font-size: 3.5vh;
+  font-size: 3.15vmax;
 }
 
 h3 {
-  font-size: 2.5vw;
+  font-size: 2.0vmax;
 }
 
 p {
@@ -48,6 +49,7 @@ p {
   position: fixed;
   bottom: 0;
   left: 0;
+  padding-top: 2px;
   height: 25vh;
   width: 100vw;
   background-color: #000;
@@ -99,9 +101,10 @@ p {
   justify-content: space-evenly;
   justify-items: stretch;
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  height: inherit;
+  width: inherit;
   margin-top: 6vmax;
+  margin-bottom: 37vmax;
   mix-blend-mode: revert;
 }
 
@@ -120,21 +123,23 @@ p {
 .artist-name {
   position: relative;
   text-align: center;
-  height: 4vh;
+  height: 2.5vmax;
   z-index: 2;
   background-color: #000;
 }
 .artist-name h2 {
+  padding-top: 5vmax;
+  margin: 0;
   color: #fff;
 }
 .artist-card {
   background-color: #000;
   border: 1px solid #000;
   position: absolute;
-  width: 80vmin;
+  width: 97vmin;
   z-index: 1;
-  transform: rotate(-15deg) translateX(0%) translateY(5vh);
-
+  transform: rotate(-15deg) translateX(2vmin);
+  padding-top: 10vmax;
 }
 
 .artist-card h3 {
